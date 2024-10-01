@@ -9,8 +9,8 @@
 </head>
 <body class="bg-mint text-gray-800">
     <div id="app">
-        <header class="bg-coral p-6">
-            <nav>
+        <header class="bg-coral">
+            <nav class="bg-coral p-6">
                 <ul class="flex justify-center space-x-8">
                     <li>
                         <a href="index.html" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-120">Home</a>
@@ -31,13 +31,13 @@
             </nav>
                     
         </header>
-        <section id="home" class="flex bg-mint p-8">
+        <section id="home" class="flex flex flex-col bg-mint p-8">
             <div class="flex m-8 space-x-8"> <!-- Flex-Container für den Text und das Bild -->
                 <div class="text-container text-center"> <!-- Textcontainer -->
                     <h1 id="welcome_portfolio" class="text-4xl font-bold mb-4">Welcome to Alina's Portfolio</h1>
                     <p v-html="animatedText" class="text-center text-lg"></p>
                 </div>
-                <div class="flex-none"> <!-- Flex-Container für das Bild -->
+                <div class="flex"> 
                     <img id="round-image" class="rounded-full w-60 h-70 ml-11" src="bilder/me1.JPG" alt="Rundes Bild"> <!-- Bild -->
                 </div>
             </div>
@@ -72,7 +72,7 @@
                         <img src="bilder/todo_projekt.jpg" alt="To Do Liste App" class="w-80 h-40 rounded-md border-4 border-gray-800">
                         <p class="text-xs text-gray-500 mt-2">To Do List - Technologies used: HTML, CSS, Vue.js</p>
                     </a>
-                    <a href="projekte/cafe/cafe.html" class="m-2 rounded">
+                    <a href="projekte/cafe/cafe.html" class="m-2">
                         <img src="bilder/cafe_projekt.png" alt="Study Cafe App" class="w-80 h-40 rounded-md border-4 border-gray-800">
                         <p class="text-xs text-gray-500 mt-2">Café Website - Technologies used: HTML, CSS</p>
                     </a>
@@ -107,7 +107,6 @@
                 </div>
             </div>
         </section>
-
         <footer class="bg-gray-800 text-white text-center p-4">
             <p>&copy; 2024 Alina Steinborm. All rights reserved.</p>
         </footer>
