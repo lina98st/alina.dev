@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alina's Portfolio</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="dist/styles.css">
+</head>
+<body class="bg-mint text-gray-800">
+    <div id="app">
+        <header class="bg-coral p-6">
+            <nav>
+                <ul class="flex justify-center space-x-8">
+                    <li>
+                        <a href="index.html" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-120">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('about')" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-110">About me</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('antwort_skills')" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-110">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('projekts')" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-110">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('contact')" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-110">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+                    
+        </header>
+        <section id="home" class="flex bg-mint p-8">
+            <div class="flex m-8 space-x-8"> <!-- Flex-Container für den Text und das Bild -->
+                <div class="text-container text-center"> <!-- Textcontainer -->
+                    <h1 id="welcome_portfolio" class="text-4xl font-bold mb-4">Welcome to Alina's Portfolio</h1>
+                    <p v-html="animatedText" class="text-center text-lg"></p>
+                </div>
+                <div class="flex-none"> <!-- Flex-Container für das Bild -->
+                    <img id="round-image" class="rounded-full w-60 h-70 ml-11" src="bilder/me1.JPG" alt="Rundes Bild"> <!-- Bild -->
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="about" class="about p-8 m-8 text-lg">
+            <h2 class="text-2xl font-semibold mb-4">About me</h2>
+            <p>Welcome to my portfolio! I'm Alina, a passionate Web Developer specialized in frontend development. 
+            I have had a passion for IT since my youth. I started my career in IT Sales, where I gained valuable experience and insights into the tech industry. However, I soon discovered my true calling in frontend development. Today, I am excited to bring innovative ideas to life through technology and design, continuously learning and evolving in this dynamic field.</p>
+            <br>
+            <div id="antwort_skills" class="antwort_skills mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+                <ul class="list-disc pl-5">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Vue.js</li>
+                    <li>Node.js</li>
+                    <li>jQuery</li>
+                    <li>TailwindCSS</li>
+                    <li>Currently learning: React</li>
+                </ul>
+            </div>
+            <br>
+            <div id="projekts" class="projekts mb-9 h-screen">
+                <h2 class="text-2xl font-semibold mb-4">My projects</h2>
+                <p>(More projects are coming)</p>
+                <br>
+                <div class="flex flex-wrap justify-center space-x-4">
+                    <a href="projekte/todo/index.html" class="m-2">
+                        <img src="bilder/todo_projekt.jpg" alt="To Do Liste App" class="w-80 h-40 rounded-md border-4 border-gray-800">
+                        <p class="text-xs text-gray-500 mt-2">To Do List - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                    <a href="projekte/cafe/cafe.html" class="m-2 rounded">
+                        <img src="bilder/cafe_projekt.png" alt="Study Cafe App" class="w-80 h-40 rounded-md border-4 border-gray-800">
+                        <p class="text-xs text-gray-500 mt-2">Café Website - Technologies used: HTML, CSS</p>
+                    </a>
+                    <a href="index.html" class="m-2">
+                        <img src="bilder/portfol.png" alt="My portfolio" class="w-80 h-40 rounded-md border-4 border-gray-800">
+                        <p class="text-xs text-gray-500 mt-2">My portfolio website - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                    <a href="projekte/formular/formular.html" class="m-2">
+                        <img src="bilder/formular_projekt.png" alt="Reiseformular" class="w-80 h-40 rounded-md border-4 border-gray-800">
+                        <p class="text-xs text-gray-500 mt-2">Travel formular - Technologies used: HTML, CSS</p>
+                    </a>
+                    <a href="https://lina98st.github.io/quicklinks/" class="m-2">
+                        <img src="bilder/quicklinks.jpg" alt="My Quicklinks" class="w-80 h-40 rounded-md border-4 border-gray-800">
+                        <p class="text-xs text-gray-500 mt-2">My links - Technologies used: HTML, CSS, React</p>
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div id="contact" class="contact mb-9">
+                <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/alina-ste/" target="_blank">
+                        <img src="svg/linkedin-brands-solid.svg" alt="LinkedIn" class="w-8 h-8">
+                    </a>
+                    <a href="https://github.com/lina98st" target="_blank">
+                        <img src="svg/square-github-brands-solid.svg" alt="GitHub" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.instagram.com/alina.devlife/?hl=de" target="_blank">
+                        <img src="svg/square-instagram-brands-solid.svg" alt="Instagram" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-800 text-white text-center p-4">
+            <p>&copy; 2024 Alina Steinborm. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    fullText: 'Hello from Germany. I\'m a Frontend Developer',
+                    animatedText: '',
+                    interval: null
+                };
+            },
+            mounted() {
+                this.animateText();
+            },
+            methods: {
+                animateText() {
+                    let index = 0;
+                    let direction = 1;
+                    this.interval = setInterval(() => {
+                        if (direction === 1) {
+                            this.animatedText = this.fullText.slice(0, index + 1);
+                            index++;
+                            if (index >= this.fullText.length) {
+                                direction = -1;
+                            }
+                        } else {
+                            this.animatedText = this.fullText.slice(0, index);
+                            index--;
+                            if (index < 0) {
+                                direction = 1;
+                            }
+                        }
+                    }, 100);
+                },
+                scrollTo(sectionId) {
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+    
+        app.mount('#app'); 
+    </script>
+    
+</body>
+</html>

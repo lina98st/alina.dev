@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reise Formular</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="styleformular.css">
+</head>
+<body>
+
+<form id="booking-form">
+    <img src="img/hike2.jpg" alt="Hike">
+    <h2> Reise buchen</h2>
+    <label for="destination">Reiseziel:</label>
+    <select id="destination" name="destination" required>
+        <option value="forest">Waldabenteuer</option>
+        <option value="berge">Bergtour</option>
+        <option value="meer">Meerblick</option>
+    </select>
+    <label for="date">Reisedatum:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="participants">Teilnehmeranzahl:</label>
+    <input type="number" id="participants" name="participants" min="1" required>
+
+    <label for="requests">Spiezialwünsche:</label>
+    <textarea id="requests" name="requests" rows="4"></textarea>
+        <button type="submit">Buchen</button>
+</form>
+    <script>
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+background-color: #2E8B57;
+font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 15rem;
+padding-right: 15rem;
+}
+
+#booking-form {
+    display: flex;
+    color: #FFD700;
+    flex-direction: column;
+    background-color: white;
+    padding: 0.3rem;
+    box-shadow: 0 5px 5px rgba(0,0,0);
+
+}
+
+#booking-form h2 {
+   position: absolute;
+   top: 12rem;  /* Abstand von oben (z.B. 20px vom oberen Rand des Bildes) */
+   left: 35rem; /* Abstand von links (z.B. 20px vom linken Rand des Bildes) */
+   color: white;
+   font-size: 2.5em;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Textschatten für bessere Lesbarkeit */
+   z-index: 1;
+}
+
+
+
+ label {
+    font-weight: bold;
+    margin: 0.1rem;
+    color: black;
+ }
+
+ input, select, textarea, button {
+    padding: 0.6rem;
+    font-size: 16px;
+ }
+
+ nav {
+    display: flex;
+    padding: 0.6rem;
+    margin: 0.2rem; 
+ }
+
+ button {
+    background-color: #FFD800;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+ }
+
+ h2 {
+    color: black;
+ }
+
+ button:hover {
+    background-color: #e7d25e;
+    color: black;
+ }
+
+
+        /* Media Queries für kleinere Bildschirme */
+        @media (max-width: 768px) {
+         #booking-form h2 {
+             font-size: 6vw; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
+             top: 5%; /* Überschrift näher an den oberen Rand setzen */
+             left: 5%;
+         }
+
+body {
+   margin: 0;
+   padding: 0;
+}
+ }
+

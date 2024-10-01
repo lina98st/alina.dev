@@ -1,0 +1,147 @@
+body {
+    background: #F5F5F5; /* Leicht dunkler */
+    color: #333; /* Dunklerer Text */
+    font-family: 'Georgia', serif;
+    font-size: 16px; /* Standardgröße für Text */
+    line-height: 1.6; /* Angenehme Zeilenhöhe */
+  }
+
+  #holder {
+    max-width: 60rem;
+    background: #E4D7C5;
+     margin: 0 auto;
+     display: flex;
+color: rgb(6, 6, 6);
+flex-direction: column;
+flex-wrap: wrap;
+
+  }
+
+nav ul {
+    padding: 0.2rem;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    flex-direction: column; 
+}
+
+/* Navigation Styling */
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem; /* Größere Buttons */
+    background-color: #8B5E3C; 
+    margin: 0.3rem;
+    border-radius: 1.5rem; /* Mehr abgerundet */
+    margin: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+    transition: transform 0.2s, box-shadow 0.2s; /* Sanfte Übergänge */
+}
+
+/* Hover Effect */
+nav ul li:hover {
+    background-color: #6D3F3F;
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Schatten beim Hover verstärken */
+}
+
+/* Text Styling */
+nav ul a {
+    display: inline-block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem; /* Größerer Text */
+    font-weight: bold;
+}
+
+/* Hover Text Styling */
+nav ul a:hover {
+    color: #FFD700; /* Textfarbe beim Hover ändern */
+    border-radius: 0.5rem;
+}
+
+
+
+
+p {
+    padding: 0.3rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    margin: 0.1rem;
+}
+
+h1 {
+    color: #E4D7C5;
+    font-weight: bold;
+}
+
+section {
+    margin: 0.1rem;
+    padding: 0.2rem;
+}
+
+header {
+    background-color: #8B5E3C;
+    padding: 0.6rem;
+    margin: 0;
+}
+
+h2 {
+    color: #8B5E3C;
+    text-shadow:
+    1px 1px 0 #000, /* Oben links */
+    1px -1px 0 #000, /* Unten links */
+}
+
+
+
+
+@media screen and (min-width: 40em) {
+
+    #holder {
+        display: flex;
+        flex-direction: row;
+          }
+
+    
+        header {
+            width: 100%;
+        }
+    
+    
+        nav {
+        flex: 0 0 25%;
+          }
+
+          nav ul {
+            flex-direction: column;
+          }
+
+          nav ul li {
+            padding: 0.3rem;
+        }
+
+        main {
+            padding: 0.2rem;
+            flex: 1;
+        }
+              
+
+
+    img {
+        max-width: 80%; 
+        max-height: 60%;
+        float: left; 
+        margin-right: 0.3rem;
+        flex: 1;
+        padding: 0.2rem;
+    }
+
+}
