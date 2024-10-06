@@ -7,11 +7,11 @@
     <script src="js/vue.js"></script>
     <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body class="bg-mint text-gray-800">
-    <div id="app">
+<body class="bg-mint text-gray-800 m-0 p-0 h-full">
+    <div id="app" class="m-0 p-0>
         <header class="bg-coral">
             <nav class="bg-coral p-6">
-                <ul class="flex justify-center space-x-8">
+                <ul class="flex justify-center flex-wrap space-x-8">
                     <li>
                         <a href="index.html" class="text-white text-lg hover:text-mint p-2 shadow-lg hover:bg-gray-700 rounded transition-all duration-300 hover:scale-120">Home</a>
                     </li>
@@ -31,23 +31,39 @@
             </nav>
                     
         </header>
-        <section id="home" class="flex flex flex-col bg-mint p-8">
-            <div class="flex m-8 space-x-8"> <!-- Flex-Container für den Text und das Bild -->
-                <div class="text-container text-center"> <!-- Textcontainer -->
-                    <h1 id="welcome_portfolio" class="text-4xl font-bold mb-4">Welcome to Alina's Portfolio</h1>
-                    <p v-html="animatedText" class="text-center text-lg"></p>
-                </div>
-                <div class="flex"> 
-                    <img id="round-image" class="rounded-full w-60 h-70 ml-11" src="bilder/me1.JPG" alt="Rundes Bild"> <!-- Bild -->
-                </div>
-            </div>
-        </section>
+  
+    <div class="text-container text-center m-8"> <!-- Textcontainer für die Überschrift -->
+        <h1 id="welcome_portfolio" class="text-4xl font-bold mb-4">Welcome to Alina's Portfolio</h1>
+    </div>
         
+<section id="home" class="flex flex-wrap bg-mint p-8">
+    <div class="flex flex-wrap m-8"> <!-- Flex-Container für Bild und Text, nebeneinander -->
+        <div class="flex-none"> <!-- Bildcontainer -->
+            <img id="round-image" class="rounded-full w-60 h-70" src="bilder/me1.JPG" alt="Portrait von Alina">
+        </div>
+        <div class="m-8"> <!-- Margin für Abstand zwischen Bild und Text -->
+            <p v-html="animatedText" class="text-center text-lg font-bold"></p> <!-- Fetter Text -->
+        </div>
+    </div>
+</section>
+
+
+    
 
         <section id="about" class="about p-8 m-8 text-lg">
             <h2 class="text-2xl font-semibold mb-4">About me</h2>
-            <p>Welcome to my portfolio! I'm Alina, a passionate Web Developer specialized in frontend development. 
-            I have had a passion for IT since my youth. I started my career in IT Sales, where I gained valuable experience and insights into the tech industry. However, I soon discovered my true calling in frontend development. Today, I am excited to bring innovative ideas to life through technology and design, continuously learning and evolving in this dynamic field.</p>
+            <p>Welcome to my portfolio! </p>
+            <br>
+            <p>I'm Alina, a passionate Web Developer specializing in frontend development. My journey in the tech industry began early, driven by a fascination with how technology shapes our world. 
+                I initially started my career in IT Sales, focusing on the data center and managed IT services sectors. This experience provided me with a deep understanding of how businesses utilize 
+                technology to solve problems and improve operations, as well as valuable insights into the broader tech industry from a service and sales perspective. </p>
+            <br>
+            <p> Over time, I discovered my true passion for frontend development, where creativity and technology intersect. Now, I am fully committed to building engaging, responsive, and user-friendly 
+                web applications. I have been honing my skills through self-study, courses, and personal projects, gaining proficiency in HTML, CSS, JavaScript, and modern frameworks like Vue.js.</p>
+            <br>
+            <p> Frontend development excites me because it allows me to create visually appealing and intuitive user experiences. Each new tool or technology I encounter challenges me to think critically 
+            and continuously improve, which makes this field incredibly rewarding.  I am excited to take on new projects where I can apply my growing knowledge and continue developing my expertise in 
+            frontend development. </p>
             <br>
             <div id="antwort_skills" class="antwort_skills mb-8">
                 <h2 class="text-2xl font-semibold mb-4">Skills</h2>
@@ -64,7 +80,7 @@
             </div>
             <br>
             <div id="projekts" class="projekts mb-9">
-                <h2 class="text-2xl font-semibold mb-4">My projects</h2>
+                <h2 class="text-2xl font-semibold c">My projects</h2>
                 <p>(More projects are coming)</p>
                 <br>
                 <div class="flex flex-wrap justify-center space-x-4">
