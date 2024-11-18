@@ -25,8 +25,8 @@ body {
     }
 
 #welcome-portfolio h1 {
-        display: flex; /* Flexbox aktivieren */
-        justify-content: center; /* Horizontal zentrieren */
+        display: flex; 
+        justify-content: center; 
         margin: 2.5rem;
     }
 
@@ -45,24 +45,22 @@ header {
     background-color: #FF6F61;
 }
 
-/*Styling für die Navigation */
 .navigation ul {
     list-style: none; 
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center; 
-    gap: 30px; /* Abstand zwischen den Links */
+    gap: 30px; 
     background-color: #FF6F61;
 } 
 
-/* Styling für Links */
 .navigation a {
     text-decoration: none; 
     color: #ffffff; 
     font-weight: bold; 
     font-size: 18px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease;
     padding: 0.5rem;
     border-radius: 0.3rem;
@@ -70,7 +68,7 @@ header {
 }
 
 .navigation a:hover {
-    color: #112f4e; /* Blaue Farbe beim Hover (anpassbar) */
+    color: #112f4e; 
 }
 
 #welcome_portfolio {
@@ -88,9 +86,9 @@ header {
     display: flex; 
     align-items: center; 
     gap: 20px; 
-    justify-content: center; /* Elemente horizontal zentrieren */
-    flex-wrap: wrap; /* Umbruch erlauben auf kleineren Bildschirmen */
-    padding: 20px; /* Optional: Innenabstand für den Container */
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 20px; 
 }
 
 #home {
@@ -187,6 +185,63 @@ padding: 1rem;
 justify-content: center;
 }
 
-/*
-coral: '#FF6F61', // Dein Coral Farbwert
-coraldark: '#e75a4c', // ein dunkles Coral
+
+/* Mobile-Optimierung für die Navigation */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 1rem; 
+        padding: 0;
+        list-style: none;
+    }
+
+    .navigation ul li {
+        margin: 0; 
+    }
+
+    .navigation ul li a {
+        display: block; 
+        padding: 0.5rem 1rem; /* Innenabstand für Klickflächen */
+        text-align: center; /* Text zentrieren */
+        background-color: #e8f5e9; /* Optional: Hintergrundfarbe */
+        color: #0A1A33; /* Optional: Schriftfarbe */
+        text-decoration: none; /* Entfernt Unterstreichung */
+        border-radius: 5px; /* Runde Ecken */
+    }
+
+    .navigation ul li a:hover {
+        background-color: #c8e6c9; 
+        color: #0A1A33; 
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduzierte Größe für h1 (~24px) */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Reduzierte Größe für h2 (~20px) */
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutmeText {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    #app {
+
+    }
+
+    img {
+        max-width: 80%; /* Bild nimmt maximal 90% der Breite des Containers ein */
+        margin: 0 auto; /* Zentriert das Bild */
+    }
+
+}
+
