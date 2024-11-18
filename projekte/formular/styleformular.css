@@ -1,0 +1,95 @@
+* {
+   box-sizing: border-box; 
+}
+
+body {
+   background-color: #2a6344; 
+   font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+   padding: 0;
+   margin: 0; 
+}
+
+.image-container {
+   max-width: 37.5rem; 
+   margin: 1rem auto;  
+   text-align: center; 
+   position: relative;  
+}
+
+.image-container img {
+   width: 100%;       
+   height: auto;      
+   border-radius: 0.625rem;   
+   margin-bottom: 1rem; 
+}
+
+.image-container h2 {
+   color: white;       
+   font-size: 2rem;    
+   text-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.7); 
+   text-align: center;  
+   margin-top: -1.5rem; 
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+}
+
+#booking-form {
+   display: flex;
+   color: #FFD700;
+   flex-direction: column;
+   background-color: rgba(255, 255, 255, 0.9); 
+   padding: 2rem;        
+   box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.5); 
+   border-radius: 0.625rem; 
+   max-width: 37.5rem; 
+   width: 100%;          
+   margin: auto;         
+   position: relative;    
+   z-index: 2;          
+}
+
+label {
+   font-weight: bold;
+   margin: 0.5rem 0; 
+   color: black;
+}
+
+input, select, textarea, button {
+   padding: 0.6rem;
+   font-size: 1rem; 
+   width: 100%; 
+   margin-top: 0.5rem;
+}
+
+button {
+   background-color: #FFD800;
+   color: black;
+   border: none;
+   cursor: pointer;
+   margin: 1rem 0; 
+   border-radius: 0.3rem;
+   padding: 0.5rem; 
+}
+
+button:hover {
+   background-color: #e7d25e;
+   color: black;
+}
+
+/* Media Queries für kleinere Bildschirme */
+@media (max-width: 768px) {
+   .image-container {
+       max-width: 90%; 
+   }
+
+   #booking-form {
+       max-width: 90%; 
+   }
+
+   .image-container h2 {
+       font-size: 8vw;
+   }
+}

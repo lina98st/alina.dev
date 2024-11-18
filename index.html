@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alina's Portfolio</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('about')">About me</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('antwortSkills')">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('projekts')">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="scrollTo('contact')">Contact</a>
+                    </li>
+                </ul>
+            </nav>       
+        </header>
+        <div id="welcome-portfolio"> 
+            <h1>Welcome to Alina's Portfolio</h1>
+        </div>
+<section id="home">
+            <img id="round-image" src="img/me2.webp" alt="Image of Alina" width="350" height="350">
+            <p v-html="animatedText" class="moving-text"></p> 
+</section>
+        <main id="about">
+            <h2>About me</h2>
+            <div class="aboutmeText">
+                <img src="img/AI-woman.webp" alt="woman programming" class="coding-woman" loading="lazy" width="400" height="400">
+                <p>
+                  I'm Alina, a passionate Frontend Web Developer with a background in IT Sales. My journey in the industry started with a fascination for how technology shapes our world. Through my experience in IT Sales, I gained valuable insights into how businesses use technology to solve problems and improve operations.
+                </p>
+                <p>
+                  Driven by creativity and problem-solving, I found my true passion in frontend development. I specialize in creating engaging, responsive, and user-friendly web applications using HTML, CSS, JavaScript, and modern frameworks like Vue.js.
+                </p>
+                <p>
+                  Frontend development excites me because it combines design and technology to deliver intuitive user experiences. I'm eager to apply my skills to new projects and continue growing as a developer.
+                </p>
+            </div>
+
+            <div id="antwortSkills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Vue.js</li>
+                    <li>Node.js</li>
+                    <li>jQuery</li>
+                    <li>TailwindCSS</li>
+                </ul>
+            </div>
+            <br>
+            <h2>My projects</h2>
+            <div id="projekts">
+                <br>
+                <div class="projects-container">
+                    <a href="projekte/todo/index.html">
+                        <img src="img/todo_projekt.webp" alt="To Do Liste App" width="400" height="200">
+                        <p>To Do List - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                    <a href="projekte/cafe/cafe.html">
+                        <img src="img/cafe_projekt.webp" alt="Study Cafe App" width="400" height="200">
+                        <p>Café Website - Technologies used: HTML, CSS</p>
+                    </a>
+                    <a href="index.html">
+                        <img src="img/portfol.webp" alt="My portfolio" width="400" height="200">
+                        <p>My portfolio website - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                    <a href="projekte/formular/formular.html">
+                        <img src="img/formular_projekt.webp" alt="Reiseformular" width="400" height="200">
+                        <p>Travel formular - Technologies used: HTML, CSS</p>
+                    </a>
+                    <a href="https://lina98st.github.io/myquicklinks-vu/">
+                        <img src="img/quicklinks.webp" alt="My Quicklinks" width="400" height="200">
+                        <p>My links - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                    <a href="https://lina98st.github.io/burger-bar/">
+                        <img src="img/burgerbar.webp" alt="Burger Bar" width="400" height="200">
+                        <p>Burger-Restaurant website - Technologies used: HTML, CSS, JavaScript</p>
+                    </a>
+                    <a href="https://lina98st.github.io/budgetplaner/">
+                        <img src="img/budgetplaner.webp" alt="Budget Planer App" width="400" height="200">
+                        <p>Budget-Planer - Technologies used: HTML, CSS, Vue.js</p>
+                    </a>
+                </div>
+            </div>     
+            <br>
+            <h2>Contact</h2>
+            <div id="contact">
+                <div>
+                    <a href="https://www.linkedin.com/in/alina-ste/" target="_blank">
+                        <img src="svg/linkedin-brands-solid.svg" alt="LinkedIn" width="60" height="60">
+                    </a>
+                    <a href="https://github.com/lina98st" target="_blank">
+                        <img src="svg/square-github-brands-solid.svg" alt="GitHub" width="60" height="60">
+                    </a>
+                    <a href="https://www.instagram.com/alina.devlife/?hl=de" target="_blank">
+                        <img src="svg/square-instagram-brands-solid.svg" alt="Instagram" width="60" height="60">
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    fullText: 'Hello from Germany. I\'m a Frontend Developer',
+                    animatedText: '',
+                    interval: null
+                };
+            },
+            mounted() {
+                this.animateText();
+            },
+            methods: {
+                animateText() {
+                    let index = 0;
+                    let direction = 1;
+                    this.interval = setInterval(() => {
+                        if (direction === 1) {
+                            this.animatedText = this.fullText.slice(0, index + 1);
+                            index++;
+                            if (index >= this.fullText.length) {
+                                direction = -1;
+                            }
+                        } else {
+                            this.animatedText = this.fullText.slice(0, index);
+                            index--;
+                            if (index < 0) {
+                                direction = 1;
+                            }
+                        }
+                    }, 100);
+                },
+                scrollTo(sectionId) {
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+        app.mount('#app'); 
+    </script>
+    
+</body>
+</html>

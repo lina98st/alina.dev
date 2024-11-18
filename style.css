@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('fonts/Satisfy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+    color: #0A1A33;
+    font-family: 'Lato';
+    }
+
+#welcome-portfolio h1 {
+        display: flex; /* Flexbox aktivieren */
+        justify-content: center; /* Horizontal zentrieren */
+        margin: 2.5rem;
+    }
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+margin: 2rem;
+}
+
+header {
+    padding: 2rem;
+    background-color: #FF6F61;
+}
+
+/*Styling für die Navigation */
+.navigation ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 30px; /* Abstand zwischen den Links */
+    background-color: #FF6F61;
+} 
+
+/* Styling für Links */
+.navigation a {
+    text-decoration: none; 
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 18px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten */
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #D9574E;
+}
+
+
+
+/* Hover-Effekt */
+.navigation a:hover {
+    color: #112f4e; /* Blaue Farbe beim Hover (anpassbar) */
+}
+
+#welcome_portfolio {
+    margin: 3rem;
+}
+
+#about {
+    margin: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+/* Container für Bild und Text */
+.home-container {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    justify-content: center; /* Elemente horizontal zentrieren */
+    flex-wrap: wrap; /* Umbruch erlauben auf kleineren Bildschirmen */
+    padding: 20px; /* Optional: Innenabstand für den Container */
+}
+
+#home {
+    display: flex;
+    align-items: center; 
+}
+
+#home p {
+        display: inline-block;
+}
+
+/* Styling für das runde Bild */
+#round-image {
+    border-radius: 40%; 
+    max-width: 100%; 
+    height: auto; 
+    margin: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+/* Styling für den animierten Text */
+.moving-text {
+    font-size: 1.5rem;
+    color: #0A1A33; 
+    margin: 2rem;
+}
+
+
+.coding-woman {
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+    float: right;
+    margin-left: 20px; /* Abstand links vom Bild */
+}
+
+.aboutmeText p {
+    margin-bottom: 2rem;
+}
+
+/* Container für die Projekte */
+#projekts {
+    text-align: center;
+    margin: 40px auto;
+}
+
+#projekts h2 {
+    text-align: left; 
+    margin-left: 2rem; 
+}
+
+.projects-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.projects-container a {
+    text-decoration: none; 
+    color: inherit; 
+    width: 400px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.projects-container img {
+    border-radius: 0.3rem;
+    border: 2px solid #0A1A33; 
+    max-width: 100%;
+}
+
+footer {
+display: flex;
+background-color: #0A1A33;
+color: white;
+padding: 1rem;
+justify-content: center;
+}
+
+/*
+coral: '#FF6F61', // Dein Coral Farbwert
+coraldark: '#e75a4c', // ein dunkles Coral

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+	<script src="js/vue.js"> </script> 
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="aufgabenApp">
+		<h1> To-Do-Liste </h1>
+     <p>
+	<label for="neueAufgabe">Weitere Aufgaben</label>
+	<input type="text" id="neueAufgabe" v-model="neueAufgabe">
+	<button class="hinzu" @click="aufgabeHinzu">hinzufügen</button>
+    </p>
+
+<h2>Alle Aufgaben</h2>
+<ul>
+	<li v-for="(aufgabe, index) in aufgaben" :class="{
+		'abgeschlossen' : aufgabe.fertig}">
+		<p>{{ aufgabe.beschreibung }}</p>
+	<button class="erledigtWechseln" @click="erledigtWechseln(index)">&#10003;</button>
+	<button class="loeschen" @click="loeschen(index)">x</button>
+</li>
+
+
+<h2> Noch tun ({{nichterledigtCount}})</h2>
+<ul> 
+	<li v-for="aufgabe in nichterledigt"> {{ aufgabe.beschreibung }} </li>
+</ul>
+
+<h2> Bereits erledigt ({{erledigtCount}})</h2>
+<ul>
+	<li v-for="aufgabe in erledigt"> {{ aufgabe.beschreibung }}  
+	</li>
+</ul>
+<script>
+const app = {
+    data() { 
+	return {
+		neueAufgabe: ' ',
+		aufgaben: [
+			{ beschreibung: "Aufstehen", fertig: true },
+			{ beschreibung: "Sport", fertig: false },
+			{ beschreibung: "Meditation", fertig: false },
+			{ beschreibung: "Mails", fertig: false },
+			{ beschreibung: "Daten sichern", fertig: false },
+			{ beschreibung: "Ordnung machen", fertig: false },
+		]
+	};
+},
+methods: {
+	aufgabeHinzu() {
+		this.aufgaben.push ({beschreibung: this.neueAufgabe, fertig: false});
+		this.neueAufgabe = '';
+	},
+	loeschen(index) {
+		this.aufgaben.splice(index, 1); 
+	},
+	erledigtWechseln(index) {
+		this.aufgaben[index].fertig = this.aufgaben[index]. fertig ?
+		false : true;
+	},
+ },
+	computed: {
+		erledigt() {
+			return this.aufgaben.filter(aufgabe => aufgabe.fertig);
+		},
+		nichterledigt() {
+			return this.aufgaben.filter(aufgabe => !aufgabe.fertig);
+		},
+		erledigtCount() {
+			return this.erledigt.length;
+		},
+		nichterledigtCount() {
+			return this.nichterledigt.length;
+		}
+	},
+	 
+ };
+Vue.createApp(app) .mount("#aufgabenApp");
+</script>
+
+</main>
+</body>
+</html>
