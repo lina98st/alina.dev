@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box; /* Padding und Border werden in die Größe einbezogen */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -65,9 +69,6 @@ header {
     background-color: #D9574E;
 }
 
-
-
-/* Hover-Effekt */
 .navigation a:hover {
     color: #112f4e; /* Blaue Farbe beim Hover (anpassbar) */
 }
@@ -117,16 +118,29 @@ header {
     margin: 2rem;
 }
 
-
 .coding-woman {
     border-radius: 1rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
     float: right;
-    margin-left: 20px; /* Abstand links vom Bild */
+    margin-left: 20px; 
 }
 
+.aboutmeText {
+align-items: center;
+margin-bottom: 2rem;
+}
+
+.aboutmeText {
+    margin-bottom: 3rem; /* Abstand zwischen About Me und dem nächsten Abschnitt */
+}
+
+#antwortSkills {
+    margin-top: 8rem; /* Abstand oberhalb von Skills */
+}
+
+
 .aboutmeText p {
-    margin-bottom: 2rem;
+    align-items: center;
 }
 
 /* Container für die Projekte */
