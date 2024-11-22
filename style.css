@@ -133,9 +133,23 @@ margin-bottom: 2rem;
 }
 
 #antwortSkills {
-    margin-top: 8rem; /* Abstand oberhalb von Skills */
+    margin-top: 8rem; 
 }
 
+.tech-logos {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tech-logos img {
+    flex: 1 1 150px; /* Jedes Bild nimmt Platz ein, mindestens 150px */
+    max-width: 200px; /* Begrenzung der maximalen Breite */
+    height: auto; /* Bewahrt das Seitenverhältnis */
+    margin: 3rem;
+}
 
 .aboutmeText p {
     align-items: center;
@@ -243,5 +257,19 @@ justify-content: center;
         margin: 0 auto; /* Zentriert das Bild */
     }
 
+}
+
+/*Tech Bilder media queries*/
+
+@media (max-width: 600px) {
+    .tech-logos img {
+        flex: 1 1 100px; /* Bilder werden kleiner */
+    }
+}
+
+@media (max-width: 400px) {
+    .tech-logos img {
+        flex: 1 1 100%; /* Ein Bild pro Zeile */
+    }
 }
 
