@@ -248,13 +248,10 @@ justify-content: center;
         flex-direction: column;  
     }
 
-    #app {
-
-    }
 
     img {
-        max-width: 80%; /* Bild nimmt maximal 90% der Breite des Containers ein */
-        margin: 0 auto; /* Zentriert das Bild */
+        max-width: 80%; 
+        margin: 0 auto; 
     }
 
 }
@@ -263,7 +260,12 @@ justify-content: center;
 
 @media (max-width: 600px) {
     .tech-logos img {
-        flex: 1 1 100px; /* Bilder werden kleiner */
+        flex: 1 1 100px; /* Bilder werden kleiner*/
+    }
+
+    .coding-woman {
+        width: 100%; 
+        height: auto; 
     }
 }
 
