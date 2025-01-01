@@ -24,14 +24,7 @@ body {
     font-family: 'Lato';
     }
 
-    html, body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; 
-        box-sizing: border-box; 
-    }
-    
+
 
 #welcome-portfolio h1 {
         display: flex; 
@@ -227,6 +220,7 @@ margin-bottom: 2rem;
     max-width: 1200px; /* Begrenze die Breite, z. B. auf 1200px */
     margin: 0 auto;    /* Zentriert den Wrapper */
     padding: 0 20px;   /* Optional: Innenabstand für kleinere Bildschirme */
+    width: 100%;
 }
 
 
