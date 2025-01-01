@@ -217,10 +217,10 @@ margin-bottom: 2rem;
 }
 
 .wrapper {
-    max-width: 1200px; /* Begrenze die Breite, z. B. auf 1200px */
+    max-width: 1200px; 
     margin: 0 auto;    /* Zentriert den Wrapper */
-    padding: 0 20px;   /* Optional: Innenabstand für kleinere Bildschirme */
-    width: 100%;
+    padding: 0 20px;   
+    width: 100%; 
 }
 
 
