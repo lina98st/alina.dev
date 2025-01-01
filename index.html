@@ -28,8 +28,9 @@
                         <a href="#" @click="scrollTo('contact')">Contact</a>
                     </li>
                 </ul>
-            </nav>       
+            </nav>     
         </header>
+        <div class="wrapper">  
         <div id="welcome-portfolio"> 
             <h1>Welcome to Alina's Portfolio</h1>
         </div>
@@ -38,7 +39,7 @@
             <p v-html="animatedText" class="moving-text"></p> 
 </section>
         <main id="about">
-            <div class="aboutmeText">
+            <section class="aboutmeText">
                 <img src="img/AI-woman.webp" alt="woman programming" class="coding-woman" loading="lazy" width="400" height="400">
                 <h2>About me</h2>
                 <p>
@@ -50,10 +51,10 @@
                 <p>
                   Frontend development excites me because it combines design and technology to deliver intuitive user experiences. I'm eager to apply my skills to new projects and continue growing as a developer.
                 </p>
-            </div>
-            <div id="antwortSkills">
+            </section>
+            <section id="antwortSkills">
                 <h2>Tech Skills</h2>
-                <div class="tech-logos">
+                <section class="tech-logos">
                     <img src="tech-logos/html-5.svg" alt="HTML Logo" width="150" height="100">
                     <img src="tech-logos/css.svg" alt="CSS Logo" width="250" height="100">
                     <img src="tech-logos/javascript.svg" alt="JavaScript Logo" width="150" height="150">
@@ -61,47 +62,61 @@
                     <img src="tech-logos/nodejs.svg" alt="Node JS Logo" width="150" height="150">
                     <img src="tech-logos/vue.svg" alt="Vue JS Logo" width="150" height="150">
                     <img src="tech-logos/tailwindcss.svg" alt="Tailwind CSS Logo" width="150" height="auto">
-                </div>
-            </div>
-            
+                </section>            
             <br>
             <h2>My projects</h2>
             <div id="projekts">
                 <br>
-                <div class="projects-container">
+                <section class="projects-container">
                     <a href="projekte/todo/index.html">
+                        <figure>
                         <img src="img/todo_projekt.webp" alt="To Do Liste App" width="400" height="200">
-                        <p>To Do List - Technologies used: HTML, CSS, Vue.js (Standalone, Options API)</p>
+                        <figcaption>To Do List - Technologies used: HTML, CSS, Vue.js (Standalone, Options API)</figcaption>
+                    </figure>
                     </a>
                     <a href="projekte/cafe/cafe.html">
+                    <figure>
                         <img src="img/cafe_projekt.webp" alt="Study Cafe App" width="400" height="200">
-                        <p>Café Website - Technologies used: HTML, CSS</p>
+                        <figcaption>Café Website - Technologies used: HTML, CSS</figcaption>
+                    </figure>
                     </a>
                     <a href="index.html">
+                    <figure>
                         <img src="img/portfolio.webp" alt="My portfolio" width="400" height="200">
-                        <p>My portfolio website - Technologies used: HTML, CSS, Vue.js (Standalone, Options API)</p>
+                        <figcaption>My portfolio website - Technologies used: HTML, CSS, Vue.js (Standalone, Options API)</figcaption>
+                    </figure>
                     </a>
                     <a href="projekte/formular/formular.html">
+                    <figure>
                         <img src="img/formular_projekt.webp" alt="Reiseformular" width="400" height="200">
-                        <p>Travel formular - Technologies used: HTML, CSS, JavaScript</p>
+                        <figcaption>Travel formular - Technologies used: HTML, CSS, JavaScript</figcaption>
+                    </figure>
                     </a>
                     <a href="https://lina98st.github.io/myquicklinks-vu/">
+                    <figure>
                         <img src="img/quicklinks.webp" alt="My Quicklinks" width="400" height="200">
-                        <p>My links - Technologies used: HTML, CSS, Vue.js (SFC, Composition API)</p>
+                        <figcaption>My links - Technologies used: HTML, CSS, Vue.js (SFC, Composition API)</figcaption>
+                    </figure>
                     </a>
                     <a href="https://lina98st.github.io/burger-bar/">
+                    <figure>
                         <img src="img/burgerbar.webp" alt="Burger Bar" width="400" height="200">
-                        <p>Burger-Restaurant website - Technologies used: HTML, CSS, JavaScript</p>
+                        <figcaption>Burger-Restaurant website - Technologies used: HTML, CSS, JavaScript</figcaption>
+                    </figure>
                     </a>
                     <a href="https://lina98st.github.io/budgetplaner/">
+                    <figure>
                         <img src="img/budgetplaner.webp" alt="Budget Planer App" width="400" height="200">
-                        <p>Budget-Planer - Technologies used: HTML, CSS, Vue.js (SFC, Composition API)</p>
+                        <figcaption>Budget-Planer - Technologies used: HTML, CSS, Vue.js (SFC, Composition API)</figcaption>
+                    </figure>
                     </a>
                     <a href="https://lina98st.github.io/Bento-grid/">
+                    <figure>
                         <img src="img/bento-grid.webp" alt="Bento grid layout" width="400" height="200">
-                        <p>Bento grid layout - Technologies used: HTML, CSS Grid</p>
+                        <figcaption>Bento grid layout - Technologies used: HTML, CSS Grid</figcaption>
+                    </figure>
                     </a>
-                </div>
+                </section>
             </div>     
             <br>
             <h2>Contact</h2>
@@ -119,10 +134,11 @@
                 </div>
             </div>
         </main>
+    </div>
         <footer>
             <p>&copy; 2024. All rights reserved.</p>
         </footer>
-    </div>
+</div>
     <script>
         const app = Vue.createApp({
             data() {
@@ -165,6 +181,5 @@
         });
         app.mount('#app'); 
     </script>
-    
 </body>
 </html>
